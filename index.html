@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Dream Lab Blog</title>
+		<meta name="description" content="I am writing about my experiences at Dream Lab 2025">
+		<link rel="alternate" href="/dream-lab-blog/feed/feed.xml" type="application/atom+xml" title="Dream Lab Blog">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+		<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+		
+		
+		<style>/* Theme colors */
+:root {
+
+
+	--background-color: #000;
+
+	--text-color: #fff;
+	--text-color-link: #0f2;
+	--text-color-link-active: #0ff;
+	--text-color-link-visited: #0b0;
+
+	--syntax-tab-size: 2;
+}
+
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: "Source Sans 3", sans-serif;
+	color: var(--text-color);
+	background-color: var(--background-color);
+	text-align: center;
+}
+html {
+	overflow-y: scroll;
+	box-sizing: border-box;
+
+}
+body {
+	max-width: 70%;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+h1,
+h2,
+h3 {
+  color: #ffffff;
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+}
+
+h4,
+h5 {
+  color: #ffffff;
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+	font-family: "Source Sans 3", sans-serif;
+  	font-weight: 400;
+  	color: #00ff22;
+  	font-size: 1.2em;
+  	
+}
+
+li {
+	line-height: 1.5;
+}
+
+a{
+	font-family: "Silkscreen", sans-serif;
+  	color: #00ff22;
+  	text-decoration: none;
+	font-variant: small-caps;
+	font-size: 1.2em;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed #aaa;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed #aaa;
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: "Space Mono", monospace;
+	font-weight: 400;
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	text-align: center;
+	gap: .5em 1em;
+	padding: 0;
+	margin: auto;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: #444;
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.5em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
+
+
+/*https://css-tricks.com/snippets/css/typewriter-effect/ */
+
+.typewriter h2 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid #00ff22; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.2em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #00ff22;
+  }
+}
+
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after,
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+@media screen and (max-width: 850px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background-color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: black;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #222;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn,
+  .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+body{
+    width: 50%;
+    font-size: 1.2em;
+  }
+  h1{
+    padding-top: 3em;
+  }
+  a{
+    font-size: 1.7em;
+  }
+.cls-1 {
+        fill: #0f2;
+      }</style>
+		
+	</head>
+	<body>
+	
+		
+<h1 id="dream-lab-blog">Dream Lab Blog</h1>
+<svg width="250" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.3 43.69">
+  <defs>
+    
+  </defs>
+  <path class="cls-1" d="M55.05,29.5l-4.13-.73c1.4-1.71,2.22-3.88,2.22-6.18,0-.81-.1-1.61-.3-2.37,2.11-1.03,3.67-2.69,4.23-4.82,1.25-4.68-2.79-9.82-9.01-11.48-1.17-.31-2.34-.48-3.47-.51-.58-.56-1.28-1.12-2.08-1.63-2.73-1.76-5.51-2.31-6.21-1.23-.57.88.42,2.58,2.29,4.12-1.18.61-2.17,1.41-2.9,2.39-.36.05-.72.12-1.07.22-2.21-1.37-4.73-2.09-7.35-2.09s-5.05.69-7.23,2.01c-.62-.17-1.26-.25-1.91-.25-3.22,0-6.02,2.13-6.94,5.12-4.84.56-8.6,4.68-8.6,9.66,0,2.1.67,4.05,1.81,5.64L.3,35.28c-.67,1.3-.16,2.92,1.14,3.59h0c1.3.67,2.92.16,3.59-1.14l3.62-6.99c.38.15.77.28,1.17.39l-3.71,7.16c-.67,1.3-.16,2.92,1.14,3.59h0c1.3.67,2.92.16,3.59-1.14l2.96-5.71c1.77,1.72,4.17,2.74,6.78,2.74.9,0,1.79-.12,2.65-.37,1.83,2.01,4.45,3.18,7.19,3.18s5.11-1.05,6.93-2.9c.45.06.9.09,1.34.09.87,0,1.72-.12,2.54-.34l6.39,5.59c1.1.96,2.8.85,3.76-.25s.85-2.8-.25-3.76l-5.16-4.51c.3-.33.57-.69.82-1.06l7.34,1.3c1.44.26,2.83-.71,3.09-2.16h0c.26-1.44-.71-2.83-2.16-3.09ZM46.13,28.88l-.65.28-.18.68c-.28,1.06-.81,2-1.5,2.78l-1.89-1.66c-1.1-.96-2.8-.85-3.76.25h0c-.88,1-.86,2.49-.02,3.48.05.06.11.12.17.18,0,0,0,0,0,0,0,0,.01.01.02.02-.39-.02-.77-.08-1.15-.17l-.88-.2-.57.7c-1.3,1.59-3.23,2.5-5.28,2.5s-3.99-.93-5.28-2.51c-.09-.11-.18-.22-.27-.34l-.65-.9-1.05.43c-.82.34-1.69.51-2.58.51-2.02,0-3.87-.88-5.13-2.32-.09-.1-.17-.2-.25-.3l1.27-2.45c.5-.97.34-2.12-.31-2.92-.22-.26-.49-.48-.81-.65h0c-1.3-.67-2.92-.16-3.59,1.14l-.56,1.08c-2.38-.39-4.35-2.01-5.23-4.19,0,0,0,0,0,0-.33-.8-.51-1.67-.51-2.58,0-3.76,3.05-6.82,6.81-6.83.02,0,.05,0,.07,0h1.27l.17-1.26c.28-2.16,2.14-3.79,4.33-3.79.54,0,1.08.1,1.58.3l.71.28.63-.43c1.83-1.25,3.98-1.91,6.21-1.91s4.35.65,6.17,1.88c0,0,0,0,0,0,0,0,.02.01.03.02-2.38.79-3.98,2.06-3.75,3.11.03.14.09.27.18.39.66.84,2.72,1.16,5.15.79,0,0,0,.01.01.02,0,0,0,0,0,0,.33.74.78,1.45,1.33,2.12,1.64,2.01,4.15,3.64,7.18,4.45,2.27.61,4.53.66,6.53.26,0,0,0,.02,0,.02,0,0,0,0,.01,0,.1.47.16.96.16,1.45,0,2.73-1.62,5.19-4.13,6.27Z"></path>
+  <path class="cls-1" d="M30.8,16.72c-.47-.25-1.06-.07-1.31.41-.25.47-.07,1.06.41,1.31,1.97,1.04,3.2,3.06,3.2,5.29,0,3.29-2.68,5.97-5.97,5.97s-5.97-2.68-5.97-5.97c0-2.23,1.23-4.26,3.2-5.29.47-.25.66-.84.41-1.31-.25-.47-.84-.66-1.31-.41-2.62,1.37-4.24,4.06-4.24,7.01,0,4.36,3.55,7.91,7.91,7.91s7.91-3.55,7.91-7.91c0-2.95-1.63-5.64-4.24-7.01Z"></path>
+  <path class="cls-1" d="M27.13,23.64c.54,0,.97-.43.97-.97v-7.55c0-.54-.43-.97-.97-.97s-.97.43-.97.97v7.55c0,.54.43.97.97.97Z"></path>
+</svg>
+<br>
+<br>
+<div class="typewriter">
+  <h2 id="welcome-to-dream-lab-2025">Welcome to Dream Lab 2025</h2>
+    </div>
+  <br>
+  <div>
+    <p><a href="about/">About</a> &nbsp; | &nbsp;
+      <a href="CV.pdf">CV</a> &nbsp; | &nbsp;
+      <a href="blog/">Blog</a>
+    </p>
+</div>
+
+		
+		<!-- This page `/` was built on 2025-05-14T18:17:58.526Z -->
+		<script type="module" src="/dream-lab-blog/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
