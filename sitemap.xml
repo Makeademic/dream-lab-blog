@@ -2,47 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	
 	<url>
-		<loc>https://example.com/dream-lab-blog/about/</loc>
+		<loc>https://makeademic.github.io/dream-lab-blog/about/</loc>
 		<lastmod>2025-05-14</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/dream-lab-blog/blog/</loc>
+		<loc>https://makeademic.github.io/dream-lab-blog/blog/</loc>
 		<lastmod>2025-05-14</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/dream-lab-blog/</loc>
+		<loc>https://makeademic.github.io/dream-lab-blog/</loc>
 		<lastmod>2025-05-14</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/dream-lab-blog/tags/</loc>
+		<loc>https://makeademic.github.io/dream-lab-blog/tags/</loc>
 		<lastmod>2025-05-14</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/dream-lab-blog/feed/feed.xml</loc>
+		<loc>https://makeademic.github.io/dream-lab-blog/feed/feed.xml</loc>
 		<lastmod>2025-05-14</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/dream-lab-blog/blog/firstpost/</loc>
+		<loc>https://makeademic.github.io/dream-lab-blog/blog/firstpost/</loc>
 		<lastmod>2025-05-20</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/dream-lab-blog/blog/secondpost/</loc>
+		<loc>https://makeademic.github.io/dream-lab-blog/blog/secondpost/</loc>
 		<lastmod>2025-05-21</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/dream-lab-blog/blog/thirdpost/</loc>
+		<loc>https://makeademic.github.io/dream-lab-blog/blog/thirdpost/</loc>
 		<lastmod>2025-05-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/dream-lab-blog/blog/fourthpost/</loc>
+		<loc>https://makeademic.github.io/dream-lab-blog/blog/fourthpost/</loc>
 		<lastmod>2025-05-23</lastmod>
 	</url>
 </urlset>
