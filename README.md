@@ -42,7 +42,7 @@ npx @11ty/eleventy --serve
 ```
 2. Command + click on the local link to view a preview of your site in a new browser tab
 3. This process will be constantly running, so any changes you make in the editor will populate in the 
-4. Note: Type Control+C in the **Terminal** to terminate the command if you don't want it running in the background.
+> Note: Type Control+C in the **Terminal** to terminate the command if you don't want it running in the background.
 
 ### Editing Text
 >Your text files will be in the "content" folder, your assets like images and documents will be in the "public" folder, and your styling will be in the "css" folder. Some file extensions you will want to know are: 
