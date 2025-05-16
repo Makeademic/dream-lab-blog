@@ -54,10 +54,10 @@ npx @11ty/eleventy --serve
 
 ### Editing Text
 >Your text files will be in the "content" folder, your assets like images and documents will be in the "public" folder, and your styling will be in the "css" folder. Some file extensions you will want to know are: 
->- .html (Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser)
->- .css (Cascading Style Sheets (CSS) is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML)
+>- .html (Hypertext Markup Language (HTML) is the standard markup language for **documents** designed to be displayed in a **web** browser)
+>- .css (Cascading Style Sheets (CSS) is a style sheet language used for specifying the presentation and **styling** of a document written in a markup language such as HTML)
 >- .js (JavaScript (JS) is the programming language for creating interactive, dynamic websites)
->- .md (Markdown is a lightweight markup language for creating formatted text using a plain-text editor)
+>- .md (Markdown is a lightweight markup language for creating formatted text using a **plain-text** editor)
 >- .njk (Nunjucks is a templating language for JavaScript)
 >- .svg (Scalable Vector Graphics (SVG) is an XML-based vector graphics format for defining two-dimensional graphics, having support for interactivity and animation)
 >- .jpg (jpg or jpeg, short for Joint Photographic Experts Group, is a compressed image format used for photos)
