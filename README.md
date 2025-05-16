@@ -4,9 +4,17 @@
 
 This repository (aka. a repo; a central storage for your project's files, folders, and version history) has all the files and instructions to build a basic personal website with an about me page, a link to a CV [PDF], and a simple blog with the [Eleventy](https://www.11ty.dev/) site generator (using the [v3.0 release](https://github.com/11ty/eleventy/releases/tag/v3.0.0)).
 
-This project will teach you how to use multiple functions with GitHub to create a website, including [GitHub Pages](https://pages.github.com/) which hosts your static site for free and [GitHub Codespaces](https://github.com/features/codespaces) which combines a file **Explorer**, code **Editor**, and **Terminal** to allow you to make updates to "push" and "pull" from your repository (from your local copy to the remote version). 
+>I recommend using Google Chrome for this exercise so you can easily use the Developer tools like "View Source" and "Inspect Elements".
 
-I recommend using Google Chrome for this exercise so you can easily use the Developer tools like "View Source" and "Inspect Elements".
+## What are GitHub Codespaces and GitHub Pages?
+
+GitHub is a company that was acquired by Microsoft that hosts git (version control) projects online. GitHub created [GitHub Pages](https://pages.github.com/), a way to host static sites for free, usually hosted at username.github.io/repository. This means that they are providing free _hosting_, meaning the server space to hold all your files and a free _domain_, the address/URL where others can navigate to your content. 
+
+More recently, GitHub also developed [GitHub Codespaces](https://github.com/features/codespaces), a staging area that combines the functionality of a file **Explorer**, allowing you to visualize your folder structure, a code **Editor**, allowing you to make updates, a **Source Control**, allowing you to push and pull changes from your local to remote repository, and a **Terminal**, allowing you to run actions like previewing a demo of your site on a locally hosted address.
+
+## Why Use Eleventy and GitHub instead of WordPress?
+
+Eleventy is a static site generator (SSG) while WordPress is a content management system (CMS). While initially building a Wordpress site might seem easier because of its graphical user interface and templates and tutorials, WordPress introduces a lot of vulnerabilities because it dynamically generates content based on user requests and database interactions, while a static site's pages are all pre-generated. WordPress also relies on a lot of plugins that constantly require updating, while static sites are lightweight and have fewer dependencies, so they can move around better.
 
 ## Getting Started
 
