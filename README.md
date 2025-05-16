@@ -14,7 +14,7 @@ More recently, GitHub also developed [GitHub Codespaces](https://github.com/feat
 
 ## Why Use Eleventy and GitHub instead of WordPress?
 
-Eleventy is a static site generator (SSG) while WordPress is a content management system (CMS). While initially building a Wordpress site might seem easier because of its graphical user interface and templates and tutorials, WordPress introduces a lot of vulnerabilities because it dynamically generates content based on user requests and database interactions, while a static site's pages are all pre-generated. WordPress also relies on a lot of plugins that constantly require updating, while static sites are lightweight and have fewer dependencies, so they can move around better.
+Eleventy is a static site generator (SSG) while WordPress is a content management system (CMS). While initially building a Wordpress site might seem easier because of its graphical user interface and templates and tutorials, WordPress introduces a lot of vulnerabilities because it dynamically generates content based on user requests and database interactions, while a static site's pages are all pre-generated. WordPress also relies on a lot of plugins that constantly require updating, while static sites are lightweight and have fewer dependencies, so they can be moved more easily.
 
 ## Getting Started
 
