@@ -26,7 +26,7 @@ So far, what we have done is created a copy of a public project on our individua
 1. On your repository's homepage, click the green 🟩 "Code" button and switch from the "Local" to the "Codespaces" tab. Then click the green 🟩 "Create codespace on main" button.
 2. This will open up a new tab in your browser and will take some time, so be patient with it. [NOTE: As of authoring this document, GitHub provides 60 free hours of Codespaces every month]
 3. You should see the **Explorer** on the left (this helps you see folder hierarchy), the **Editor** on the right (this is where you can edit the code), and the **Terminal** at the bottom (this is where we will provide instructions for building our project). The far left toolbar will let you switch between options: **Explorer**, **Search**, **Source Control**, **Run and Debug**, **Extensions**, and **GitHub**.
-4. In the **Explorer**, navigate to `_data/metadata.js` and double-click to open the file in the **Editor** space. Change the title, URL (https://username.github.io/repositoryname), description, and author data.
+4. In the **Explorer** (stacked pages icon), navigate to `_data/metadata.js` and double-click to open the file in the **Editor** space. Change the title, URL (https://username.github.io/repositoryname), description, and author data.
 5. In the **Terminal**, install dependencies (the needed files for this version of the project) by copying and pasting the code below and then pressing enter/return.
 ```
 npm install
@@ -34,6 +34,15 @@ npm install
 6. You should see new lines of text being generated in the **Terminal**.
 
 ## Editing Files in Your Project
+
+### Previewing Changes
+1. If you want to see a local test of your site before you put it on the web, copy and paste the following code in the **Terminal**
+```
+npx @11ty/eleventy --serve
+```
+2. Command + click on the local link to view a preview of your site in a new browser tab
+3. This process will be constantly running, so any changes you make in the editor will populate in the 
+4. Note: Type Control+C in the **Terminal** to terminate the command if you don't want it running in the background.
 
 ### Editing Text
 >Your text files will be in the "content" folder, your assets like images and documents will be in the "public" folder, and your styling will be in the "css" folder. Some file extensions you will want to know are: 
@@ -69,11 +78,21 @@ npm install
 
 11. Navigate in the **Explorer** to `content/blog/firstpost.md` and double-click to edit the file in the **Editor**
 12. On line 2 you can edit the title, line 3 edit the description, line 4 edit the date, and line 5 create any tags
-13. On lines 7 and below, delete and replace with your own text  
+13. On lines 7 and below, delete and replace with your own text
+> [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)  
+
+### Adding Files
+
+1. Navigate in the **Explorer** to the `content/blog/` folder and select so you are in that folder rather than the root directory.
+2. At the top of the **Explorer** menu, select the "New File" button (document with a + sign) and rename to `fifthpost.md`
+3. Navigate in the **Explorer** to `content/blog/firstpost.md` and copy and paste everything into your new `fifthpost.md` file
+4. Edit the date so that it is later than your fourthpost.md so that it will be located properly in the blog order, and edit the title and description
+
 
 ### Editing Styles
 
 1. Navigate in the **Explorer** to `css/index.css` and double-click to edit the file in the **Editor**
+> To find and replace, type Command+F for find, and then click the drop down arrow to the left of "Find" to show the option for "Replace".
 
 #### Colors
 >Hexcode is a color system on a scale from 0-9,A-F that designates a color RRGGBB. You can calculate a color using this [HTML Color Picker](https://www.w3schools.com/colors/colors_picker.asp) or you can type in a [HTML color](https://www.w3schools.com/colors/colors_names.asp)
@@ -103,7 +122,7 @@ npm install
 
 ## Push Changes to GitHub and Run Eleventy to Create Site
 
-1. In the toolbar to the left of the **Explorer**, go to Source Code.
+1. In the toolbar to the left of the **Explorer**, go to **Source Control** (branch icon with 3 circles).
 2. Write a short description of the changes you plan to "commit" from this local Codespaces copy of your repository to the remote copy of the repository that is publicly available at github.com/username/repository/
 3. Click the blue 🟦 "Commit" button and answer Yes to any pop-up boxes.
 4. In the **Terminal**, use the node package manager command npx (Node Package eXecute) to run eleventy, which will convert your markdown and nunjucks files to html files, by copying and pasting the code below and then pressing enter/return.
@@ -111,11 +130,7 @@ npm install
 npx @11ty/eleventy
 ```
 5. You should see new lines of text being generated in the **Terminal**. You may need to troubleshoot any errors.
-6. If you want to see a local test of your site before you put it on the web, copy and paste the following code in the **Terminal**
-```
-npx @11ty/eleventy --serve
-```
-7. Command/Control + click on the local link to view a preview of your site in a new browser tab
+
 
 
 ## Deploy to GitHub Pages
