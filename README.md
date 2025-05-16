@@ -8,7 +8,7 @@ This repository (aka. a repo; a central storage for your project's files, folder
 
 ## What are GitHub Codespaces and GitHub Pages?
 
-GitHub is a company that was acquired by Microsoft that hosts git (version control) projects online. GitHub created [GitHub Pages](https://pages.github.com/), a way to host static sites for free, usually hosted at username.github.io/repository. This means that they are providing free _hosting_, meaning the server space to hold all your files and a free _domain_, the address/URL where others can navigate to your content. 
+GitHub is a company that was acquired by Microsoft that hosts git (version control) projects online. GitHub created [GitHub Pages](https://pages.github.com/), a way to host static sites for free, usually hosted at https://_username_.github.io/_repository_. This means that they are providing free _hosting_, meaning the server space to hold all your files and a free _domain_, the address/URL where others can navigate to your content. 
 
 More recently, GitHub also developed [GitHub Codespaces](https://github.com/features/codespaces), a staging area that combines the functionality of a file **Explorer**, allowing you to visualize your folder structure, a code **Editor**, allowing you to make updates, a **Source Control**, allowing you to push and pull changes from your local to remote repository, and a **Terminal**, allowing you to run actions like previewing a demo of your site on a locally hosted address.
 
