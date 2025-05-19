@@ -153,6 +153,7 @@ npx @11ty/eleventy
 8. Change the branch from None to gh-pages and click the "Save" button
 9. Navigate back to Actions and you can see your site being built
 10. Once you have the green ✅ checkmark, navigate back to Settings>Pages and you should see a link in a message that says "Your site is live at https://username.github.io/repository/"
+11. Now that the gh-pages.yml is running, every time you commit a new change to your GitHub repo, it will build and deploy your changes to your gh-pages branch and your github.io site. 
 
  
 ### Implementation Notes
