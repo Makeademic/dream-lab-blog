@@ -157,4 +157,4 @@ npx @11ty/eleventy
 
  
 ### Implementation Notes
-- The `public` folder in your input directory will be copied to the output folder (via `addPassthroughCopy` in the `eleventy.config.js` file). This means `./public/css/*` will live at `./_site/css/*` after your build completes.
+- The `public` folder in your input directory will be copied to the output folder (via `addPassthroughCopy` in the `eleventy.config.js` file). This means that anything in your public folder will live in your gh-pages branch after your build completes.
