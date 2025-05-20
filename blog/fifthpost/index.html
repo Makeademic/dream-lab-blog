@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Dream Lab Blog</title>
-		<meta name="description" content="I am writing about my experiences at Dream Lab 2025">
+		<title>Dream Lab Day 5</title>
+		<meta name="description" content="This is a post on My Blog about win-win survival strategies.">
 		<link rel="alternate" href="/dream-lab-blog/feed/feed.xml" type="application/atom+xml" title="Dream Lab Blog">
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -438,50 +438,221 @@ header {
     width: 100%;
     padding: 0;
   }
+}
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
 }</style>
 		
 	</head>
 	<body>
 	
-		<div class="about-section">
-  <h1 id="about-me">About Me</h1>
-  <picture><source type="image/avif" srcset="/dream-lab-blog/about/93nFKaYuXZ-600.avif 600w"><source type="image/webp" srcset="/dream-lab-blog/about/93nFKaYuXZ-600.webp 600w"><img loading="lazy" decoding="async" src="/dream-lab-blog/about/93nFKaYuXZ-600.jpeg" alt="photo description of me" style="width:300px" width="600" height="600"></picture>
-  <p>Some text about who I am and what I do.</p>
-  <p>Resize the browser window to see that this page is responsive by the way.</p>
-</div>
-<h1 style="text-align:center" id="research-interests">Research Interests</h1>
-<div class="row">
-  <div class="column">
-    <div class="card">
-      <div class="container">
-        <h2 id="book-history">Book History</h2>
-        <p class="title">subtext</p>
-        <p>Some text that describes my interests in this field.</p>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <div class="container">
-        <h2 id="digital-humanities">Digital Humanities</h2>
-        <p class="title">subtext</p>
-        <p>Some text that describes my interest in this field.</p>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <div class="container">
-        <h2 id="visual-design">Visual Design</h2>
-        <p class="title">subtext</p>
-        <p>Some text that describes my interest in this field.</p>
-      </div>
-    </div>
-  </div>
-</div>
+		
+
+
+<h1 id="dream-lab-day-5">Dream Lab Day 5</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2025-05-24">24 May 2025</time></li>
+	<li><a href="/dream-lab-blog/tags/second-tag/" class="post-tag">second tag</a>, </li>
+	<li><a href="/dream-lab-blog/tags/posts-with-two-tags/" class="post-tag">posts with two tags</a></li>
+</ul>
+
+<p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+<h2 id="code">Code</h2>
+<h3 id="this-is-a-very-long-heading-that-i-want-to-wrap-this-is-a-very-long-heading-that-i-want-to-wrap-this-is-a-very-long-heading-that-i-want-to-wrap-this-is-a-very-long-heading-that-i-want-to-wrap">This is a very long heading that I want to wrap This is a very long heading that I want to wrap This is a very long heading that I want to wrap This is a very long heading that I want to wrap</h3>
+<p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+<pre class="language-js" tabindex="0"><code class="language-js"><span class="token comment">// this is a command</span>
+<span class="token keyword">function</span> <span class="token function">myCommand</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> counter <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    counter<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Test with a line break above this line.</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Test'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<h3 id="heading-with-a-link">Heading with a <a href="#code">link</a></h3>
+<p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+<pre><code>// this is a command
+function myCommand() {
+    let counter = 0;
+    counter++;
+}
+
+// Test with a line break above this line.
+console.log('Test');
+</code></pre>
+<h2 id="section-header">Section Header</h2>
+<p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/dream-lab-blog/blog/fourthpost/">Dream Lab Day 4</a></li>
+</ul>
 
 		
-		<!-- This page `/about/` was built on 2025-05-20T16:54:39.309Z -->
+		<!-- This page `/blog/fifthpost/` was built on 2025-05-20T16:54:39.314Z -->
 		<script type="module" src="/dream-lab-blog/dist/xbxy_EL6cU.js"></script>
 	</body>
 </html>
