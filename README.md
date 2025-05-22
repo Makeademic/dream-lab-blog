@@ -65,6 +65,12 @@ npx @11ty/eleventy --serve
 
 ---
 
+1. Navigate in the **Explorer** to `package.json` and double-click to edit the file in the **Editor**
+2. Edit lines 2, 9, 11, 18, 23, 30 and 30 to your own username and repository name
+3. Edit line 4, 20, and 21 with your own description, name, and email
+
+---
+
 1. Navigate in the **Explorer** to `content/index.njk` and double-click to edit the file in the **Editor**
 2. Edit line 16 between the opening and closing `<h1>` tags (primary header) to your preferred heading
 3. Edit line 32 between the opening and closing `<h2>` tags (secondary header) to your preferred typewriter message
